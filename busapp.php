@@ -11,7 +11,7 @@
 
 if(isset($_POST['submit'])) {
   $leeftijd = $_POST ['leeftijd'];
-      if (!empty($leeftijd)){
+      if (!empty($leeftijd)){   
           if ($leeftijd < 3){
               echo "Uw kaartje is gratis.";
           }
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
               echo "Uw kaartje is 10 euro";
           }
           }
-          else {
+          else {// hallooooooo
               echo "voer uw leeftijd in..";
           }
           }
