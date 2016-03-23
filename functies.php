@@ -1,3 +1,22 @@
+<html>
+    <h1> Functies en Includes</h1>
+    <h3> Voer een celsius waarde in </h3>
+    
+    <form name="tempConvert" method="GET" action="">
+  <input type="number" name="valueConvert">
+  <input type = "submit" name = "submit2">
+    </html>
+   
+    
+    <?php 
+    
+    
+    if (isset($_GET["submit2"])){
+          echo "de fahrenheit is: "; echo  celsiusnaarfahrenheit($_GET["valueConvert"]); echo "F"; 
+            
+    }
+    
+?>
 <?php
 function celsiusnaarfahrenheit($celsius) {
 		$fahrenheitwaarde = ($celsius * 1.8) + 32;
@@ -5,31 +24,8 @@ function celsiusnaarfahrenheit($celsius) {
         
 }
 ?>
-
-
-<html>
-    <h1> Functies en Includes</h1>
-    <h3> Voer een celsius waarde in </h3>
-    
-    <form name="tempConvert" method="GET" action="">
-  <input type="number" name="valueConvert" id="valueConvert">
-    </html>
-   
-    
-    <?php 
-    
-    
-    if ($_GET["valueConvert"] != ""){
-          echo "de fahrenheit is: "; echo  celsiusnaarfahrenheit($_GET["valueConvert"]); echo "F"; 
-            
-    }
-?>
-
 <br>
 <br>
-
-
-
 
  <html>
      <h1> 
@@ -39,12 +35,12 @@ function celsiusnaarfahrenheit($celsius) {
 <?php
 
 function deelbaardoordrie() {
-    $number = 8;
+    $number = 32;
   if($number % 3 == 0)  {
     echo "Getal "; echo "$number "; echo " is deelbaar";
 } 
-else {
-echo "Getal "; echo " $number"; echo" is niet deelbaar";
+    else {
+        echo "Getal "; echo " $number"; echo" is niet deelbaar";
 }
 }
 deelbaardoordrie();
@@ -58,15 +54,14 @@ deelbaardoordrie();
      </h1>
      <h3> Vul iets in.</h3>
      
-     <form action="" method="GET">
-     <input type = "text" name = "input">
-     <input type = "submit" name = "submit">
+     <form name= "stringconverter" method="GET" action="" >
+     <input type = "text" name = "stringconverter">
+     <input type = "submit" name = "submit1">
     </html>  
      
 <?php
-if (isset($_GET["submit"])) {
-    $string = htmlentities($_GET["input"]);
-    
+if (isset($_GET["submit1"])) {
+    $string = htmlentities($_GET["stringconverter"]);
     reverse($string);
 }
 
