@@ -5,9 +5,11 @@
 
 <?php
 include "database.php";
+include "autos.php";
+$db = new dbconn();
+$conn = $db->getDb();
+mysqli_select_db($conn,"autos");
 $sql = "SELECT * FROM autowbshp";
-mysqli_select_db($connection,"autos");
-$sql = "SELECT * FROM `autowbshp`";
 
 if (isset($_POST['submit'])){
     $maxprijs = $_POST["maxprijs"];
